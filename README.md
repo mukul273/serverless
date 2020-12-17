@@ -1,10 +1,9 @@
-## Serverless AWS
+# Serverless AWS
 
 Serverless means event driven computing running using small independent functions running inside container(s) in the cloud.
 
 AWS Lambda, AWS API Gateway and AWS DynamoDB are the core and commonly used services of AWS Serverless infrastructure
 In addition to that there are more serverless services like S3, SNS, SQS, Athena, Kinesis, STEP Functions etc.
-
 
 AWS SAM is a tool provided by AWS
     - It's lightweight version of AWS CloudFormation,
@@ -39,7 +38,8 @@ When we choose Lambda proxy integration, it merely means API gateway acts as pro
 
 CORS: Cross Origin Resource Sharing
 
-### Integration Request Mapping Template format 
+### Integration Request Mapping Template format
+
 {
   "operation": "$input.params('operation')",
   "input": {
@@ -52,4 +52,3 @@ To Install aws sdk
 
 npm init
 npm install aws-sdk --save
-
