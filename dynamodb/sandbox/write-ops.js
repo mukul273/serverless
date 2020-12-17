@@ -3,59 +3,62 @@ AWS.config.update({ region: 'us-east-2' });
 
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-// docClient.put({
-//     TableName: 'td_notes_sdk',
-//     Item: {
-//         user_id: 'bb',
-//         timestamp: 2,
-//         title: 'changed title',
-//         content: 'changed content'
-//     }
-// }, (err, data)=>{
-//     if(err) {
-//         console.log(err);
-//     } else {
-//         console.log(data);
-//     }
-// });
+// To insert the record
+/* docClient.put({
+    TableName: 'td_notes_sdk',
+    Item: {
+        user_id: 'bb',
+        timestamp: 2,
+        title: 'changed title',
+        content: 'changed content'
+    }
+}, (err, data)=>{
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+}); */
 
-// docClient.update({
-//     TableName: 'td_notes_sdk',
-//     Key: {
-//         user_id: 'bb',
-//         timestamp: 1
-//     },
-//     UpdateExpression: 'set #t = :t',
-//     ExpressionAttributeNames: {
-//         '#t': 'title'
-//     },
-//     ExpressionAttributeValues: {
-//         ':t': "Updated title"
-//     }
-// }, (err, data)=>{
-//     if(err) {
-//         console.log(err);
-//     } else {
-//         console.log(data);
-//     }
-// });
+// To update the record in table
+/* docClient.update({
+    TableName: 'td_notes_sdk',
+    Key: {
+        user_id: 'bb',
+        timestamp: 1
+    },
+    UpdateExpression: 'set #t = :t',
+    ExpressionAttributeNames: {
+        '#t': 'title'
+    },
+    ExpressionAttributeValues: {
+        ':t': "Updated title"
+    }
+}, (err, data)=>{
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+}); */
 
-// docClient.delete({
-//     TableName: 'td_notes_sdk',
-//     Key: {
-//         user_id: 'bb',
-//         timestamp: 1
-//     }
-// }, (err, data)=>{
-//     if(err) {
-//         console.log(err);
-//     } else {
-//         console.log(data);
-//     }
-// });
+//To Delete the record from the database table
+/* docClient.delete({
+    TableName: 'td_notes_sdk',
+    Key: {
+        user_id: 'bb',
+        timestamp: 1
+    }
+}, (err, data)=>{
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+}); */
 
-
-docClient.batchWrite({
+//Batch Operation
+/* docClient.batchWrite({
     RequestItems: {
         'td_notes_sdk': [
             {
@@ -94,4 +97,4 @@ docClient.batchWrite({
     } else {
         console.log(data);
     }
-});
+}); */
