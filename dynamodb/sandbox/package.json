@@ -9,6 +9,8 @@
   "author": "muks",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.813.0"
+    "async": "^3.2.0",
+    "aws-sdk": "^2.813.0",
+    "underscore": "^1.12.0"
   }
 }

@@ -54,4 +54,4 @@ npm init
 npm install aws-sdk --save
 
 To get items within single partition docClient.query should be used
-Whereas docClient.scan should be used for getting the itema across partiotions
+Whereas docClient.scan should be used for getting the items across partitions
